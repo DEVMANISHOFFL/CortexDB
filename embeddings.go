@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+// it will store 768 numbers, so if i use float64 it will take 2x memory(ram) uselessly.thats why i used float32
 type Vector []float32
 
 type Embedder interface {
