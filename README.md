@@ -1,4 +1,4 @@
-# 🛡️ [CortexDB] 
+# CortexDB
 
 A high-performance, 100% local, AI-native vector database and RAG engine built entirely in Go. 
 
