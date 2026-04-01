@@ -2,14 +2,14 @@
 
 A high-performance, 100% local, AI-native vector database and RAG engine built entirely in Go. 
 
-Unlike standard API wrappers, this engine implements its own low-level storage mechanics and spatial mathematics, allowing for private, offline semantic search over thousands of documents without sending a single byte of data to external cloud providers.
+This engine does not use standard API wrappers. Instead, it has its own low-level storage mechanics and spatial mathematics. This design allows for private, offline semantic search over thousands of documents without sending any data to external cloud providers.
 
 ## Key Features
 
-* **Zero-Cloud Privacy:** Integrates directly with local LLMs (via Ollama) for embedding and generation. Your data never leaves your machine.
-* **Custom HNSW Graph Index:** Implements a Hierarchical Navigable Small World (HNSW) graph for blazing-fast `O(log N)` semantic search routing.
-* **LSM-Inspired Storage Engine:** Combines an in-memory Memtable with a Write-Ahead Log (WAL) to ensure data durability and fast O(1) exact-match lookups.
-* **End-to-End RAG Pipeline:** Includes a built-in PDF ingestion engine, smart text chunking, and a chat interface to immediately start talking to your documents.
+* **Zero-Cloud Privacy:** This works directly with local LLMs through Ollama for embedding and generation. Your data stays on your machine.
+* **Custom HNSW Graph Index:** This uses a Hierarchical Navigable Small World (HNSW) graph for very fast `O(log N)` semantic search routing. 
+* **LSM-Inspired Storage Engine:** Combines an in-memory Memtable with a Write-Ahead Log (WAL) to ensures data durability and fast O(1) exact-match lookups.
+* **End-to-End RAG Pipeline:** Includes built-in PDF ingestion engine, smart text chunking, and a chat interface to immediately start talking to your documents.
 
 ## System Architecture
 
