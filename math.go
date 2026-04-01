@@ -11,7 +11,7 @@ func CosineSimilarity(a, b Vector) float32 {
 	var normA float32
 	var normB float32
 
-	for i := 0; i < len(a); i++ {
+	for i := range a {
 		dotProduct += a[i] * b[i]
 		normA += a[i] * a[i]
 		normB += b[i] * b[i]
@@ -21,5 +21,5 @@ func CosineSimilarity(a, b Vector) float32 {
 		return 0.0
 	}
 
-	return dotProduct / (float32(math.Sqrt(float64(normA)))) * float32(math.Sqrt(float64(normB)))
+	return dotProduct / ((float32(math.Sqrt(float64(normA)))) * float32(math.Sqrt(float64(normB))))
 }
